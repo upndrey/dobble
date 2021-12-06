@@ -1,0 +1,29 @@
+
+
+.nav {
+    &__wrapper {
+        background: $header__bg;
+        padding: 14px;
+        box-sizing: border-box;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .--svg__logo {
+        width: 69px;
+        height: 69px;
+        @include bg("contain", "center");
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+            li {
+                margin: 0 20px;
+                font-family: 'Dosis';
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.features {
+    color: #fff;
+    &__wrapper {
+        background: $features__bg;
+        position: relative;
+
+        .--svg__dobbly2 {
+            width: 100%;
+            height: 143px;
+            position: absolute;
+            bottom: -50px;
+            @include bg("contain", "center");
+            z-index: 999;
+        }
+
+        .--svg__dobbly2ellipse {
+            width: 100%;
+            height: 86px;
+            position: absolute;
+            bottom: -50px;
+            @include bg("contain", "center");
+            z-index: 1;
+        }
+    }
+    &__block {
+        padding-top: 207px;
+        margin-bottom: 90px;
+        
+        h2 {
+            text-align: center;
+            color: $secondary__color_inverse;
+        }
+
+        p {
+            font-size: 17px;
+            text-align: center;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 50px;
+        &>div {
+            width: 298px;
+            height: 200px;
+            margin: 0 50px 100px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            * {
+                text-align: center;
+            }
+
+            .icon__container {
+                width: 108px;
+                height: 108px;
+            }
+
+            span {
+                width: 200px;
+            }
+        }
+    }
+}

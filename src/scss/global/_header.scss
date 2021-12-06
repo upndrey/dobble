@@ -1,0 +1,73 @@
+.header {
+    &__wrapper {
+        background: $header__bg;
+    }
+    &__block {
+        padding-top: 167px;
+        margin-bottom: 225px;
+        .clouds {
+            width: 600px;
+            height: 268px;
+            position: absolute;
+            left: 278px;
+            top: 36px;
+            background-image: url("../img/clouds.png");
+            @include bg("contain", "center");
+        }
+    
+        p { 
+            margin-bottom: 52px;
+        }
+        .btn {
+            background: $secondary__color;
+            color: $btn__text__color_inverse;
+            width: 192px;
+            height: 47px;
+        }
+    }
+    &__icons {
+        padding-bottom: 111px;
+        display: flex;
+        
+        &>div {
+            display: flex;
+            align-items: center;
+            .icon {
+                &__container {
+                    width: 50px;
+                    height: 50px;
+                    background: #FFFFFF;
+                    border: 1.2px solid #FFFFFF;
+                    box-sizing: border-box;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 18px;
+                }
+
+                flex-grow: 1;
+                @include bg("contain", "center");
+            }
+
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+        .--svg__trade {
+            width: 41px;
+            height: 41px;
+        }
+        
+        .--svg__gift {
+            width: 33px;
+            height: 33px;
+        }
+        
+        .--svg__girl {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}

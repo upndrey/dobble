@@ -1,0 +1,97 @@
+.benefits {
+    &__wrapper {
+        background: url("../img/benefits_bg.png");
+        position: relative;
+    }
+    &__block {
+        padding-top: 129px;
+        margin-bottom: 57px;
+        
+        h2 {
+            text-align: center;
+            color: #000;
+        }
+
+        p {
+            font-size: 17px;
+            text-align: center;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 100px;
+        div {
+            display: flex;
+            flex-direction: column;
+            div {
+                width: 280px;
+                height: auto;
+                max-height: 100px;
+                margin: 0 auto;
+                padding-bottom: 20px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .icon {
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    left: -35px;
+                    top: -2px;
+                    @include bg("contain", "center");
+                }
+
+                h3 {
+                    font-size: 17px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    color: #fff;
+                }
+    
+                span {
+                    width: 300px;
+                    font-size: 14px;
+                }
+            }
+
+        }
+    }
+
+    &__left {
+        width: 579px;
+        height: 494px;
+        background:  url("../img/benefits__left.png");
+        @include bg("contain", "center top");
+        position: relative;
+        left: 20px;
+        div {
+            top: 100px;
+            span {
+                color: $benefits__left__text__color;
+            }
+        }
+    }
+
+    &__right {
+        width: 516px;
+        height: 518px;
+        background:  url("../img/benefits__right.png");
+        @include bg("contain", "center top");
+        position: relative;
+        right: 27px;
+        bottom: 22px;
+        div {
+            top: 122px;
+            span {
+                color: $benefits__right__text__color;
+            }
+        }
+    }
+}
