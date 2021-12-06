@@ -1,10 +1,30 @@
-
-
 .nav {
     &__wrapper {
+        position: fixed;
         background: $header__bg;
         padding: 14px;
         box-sizing: border-box;
+        z-index: 9999;
+
+        
+        .mobileNav__wrapper {
+            display: block;
+            &.hidden {
+                display: none;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                li {
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
     }
     display: flex;
     align-items: center;
@@ -19,11 +39,122 @@
         align-items: center;
         ul {
             display: flex;
+            
+            @media (max-width: $bp__lg) {
+                display: none;
+            }
             li {
                 margin: 0 20px;
+
+                @media (max-width: $bp__xl) {
+                    margin: 0 10px;
+                }
                 font-family: 'Dosis';
                 font-size: 14px;
+                position: relative;
+                .--svg__underline {
+                    display: none;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0px;
+                    width: 100%;
+                    height: 6px;
+                    @include bg("contain", "center");
+                }
+
+                .icon2 {
+                    height: 3px;
+                }
+
+                .icon3 {
+                    width: 80px;
+                    height: 4px;
+                }
+
+                .icon4 {
+                    width: 140px;
+                    height: 6px;
+                    bottom: -10px;
+                }
+                
+                &.active .--svg__underline,
+                &:hover .--svg__underline {
+                    display: block;
+                }
             }
+        }
+
+        .burger {
+            display: none;
+            @media (max-width: $bp__lg) {
+                display: flex;
+            }
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 30px;
+            cursor: pointer;
+            transition: .4s;
+            z-index: 1002;
+            &__icon {
+                display: block;
+                position: relative;
+                bottom: 8px;
+                background: #004577;
+                width: 90%;
+                height: 2px;
+                transition: .4s;
+
+                &::after,
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background: #004577;
+                    width: 100%;
+                    height: 2px;
+                    transition: .4s;
+                    right: 0;
+                }
+
+                &::after {
+                    top: 8px;
+                    width: 80%;
+                }
+                &::before {
+                    top: 16px;
+                    width: 50%;
+                }
+            }
+
+            &.active>.burger__icon {
+                background: transparent;
+
+                &::before,
+                &::after {
+                    top: 8px;
+                    width: 100%;
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .btn-buy {
+	    margin-left: 40px;
+        @media (max-width: $bp__xl) {
+            margin-left: 0px;
+            margin-right: 20px;
         }
     }
 }

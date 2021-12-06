@@ -4,17 +4,14 @@ $width__xl: 991px;
 $width__lg: 767px;
 $width__md: 575px;
 $width__sm: 424px;
-$width__xs: 320px;
-$bp__xxs: 100%;
+$width__xs: 100%;
 
 //breakpoins
-$bp__xxl: 1440px;
-$bp__xl: 1200px;
+$bp__xl: 1251px;
 $bp__lg: 992px;
 $bp__md: 768px;
 $bp__sm: 576px;
 $bp__xs: 425px;
-$bp__xxs: 320px;
 
 // bg colors
 $header__bg: #c2ebf5;
@@ -34,5 +31,6 @@ $secondary__color: #7A67C8;
 $secondary__color_inverse: #FAD467;
 $alert__color: #FE646F;
 $btn__buy__color: #FFD600;
+$btn__buy__color_darker: #ffbb00;
 $btn__text__color: #222222;
 $btn__text__color_inverse: #F3FCF0;

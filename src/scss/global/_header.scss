@@ -3,8 +3,20 @@
         background: $header__bg;
     }
     &__block {
-        padding-top: 167px;
+        position: relative;
+        padding-top: 267px;
+	
+        @media (max-width: $bp__lg) {
+            padding-top: 70px;
+        }
+        @media (max-width: $bp__sm) {
+            padding-top: 100px;
+        }
         margin-bottom: 225px;
+        
+        @media (max-width: $bp__md) {
+            margin-bottom: 75px;
+        }
         .clouds {
             width: 600px;
             height: 268px;
@@ -13,21 +25,99 @@
             top: 36px;
             background-image: url("../img/clouds.png");
             @include bg("contain", "center");
+            z-index: 1;
+            @media (max-width: $bp__lg) {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        h1 {
+            background: #FFFFFF;
+            background: -webkit-linear-gradient(163.42deg, #FFFFFF -302.15%, #101F1C 97.71%);
+            background: -moz-linear-gradient(163.42deg, #FFFFFF -302.15%, #101F1C 97.71%);
+            background: linear-gradient(163.42deg, #FFFFFF -302.15%, #101F1C 97.71%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            position: relative;
+            z-index: 10;
+            @media (max-width: $bp__sm) {
+                text-align: center;
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+            @media (max-width: $bp__sm) {
+                font-size: 24px;
+            }
         }
     
         p { 
             margin-bottom: 52px;
+
+            position: relative;
+            z-index: 10;
+            @media (max-width: $bp__sm) {
+                text-align: center;
+                margin-bottom: 15px;
+            }
         }
         .btn {
             background: $secondary__color;
             color: $btn__text__color_inverse;
             width: 192px;
             height: 47px;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                background: $btn__text__color_inverse;
+                color: $secondary__color;
+            }
+            
+            position: relative;
+            z-index: 10;
+            @media (max-width: $bp__sm) {
+                margin: auto;
+            }
+        }
+
+        .disks {
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            top: 100px;
+            width: 975px;
+            height: 650px;
+            background-image: url("../img/disks.png");
+            @include bg("contain", "center");
+            @media (max-width: $bp__lg) {
+                position: relative;
+                right: 50px;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            @media (max-width: $bp__sm) {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            @media (max-width: $bp__sm) {
+                top: 0;
+                right: 33px;
+                height: 250px;
+                margin: auto;
+            }
         }
     }
     &__icons {
         padding-bottom: 111px;
         display: flex;
+        
+        @media (max-width: $bp__md) {
+            width: 280px;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+        }
         
         &>div {
             display: flex;
@@ -45,6 +135,7 @@
                     align-items: center;
                     justify-content: center;
                     margin-right: 18px;
+        
                 }
 
                 flex-grow: 1;
@@ -53,6 +144,10 @@
 
             &:not(:last-child) {
                 margin-right: 40px;
+                @media (max-width: $bp__md) {
+                    margin-right: 0;
+                    margin-bottom: 25px;
+                }
             }
         }
         .--svg__trade {

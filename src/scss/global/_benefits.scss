@@ -6,6 +6,9 @@
     &__block {
         padding-top: 129px;
         margin-bottom: 57px;
+        @media (max-width: $bp__sm) {
+            margin-bottom: 25px;
+        }
         
         h2 {
             text-align: center;
@@ -18,6 +21,8 @@
             font-weight: 500;
             line-height: 150%;
             letter-spacing: 0.5px;
+            color: #838383;
+            font-size: 17px;
         }
     }
 
@@ -39,6 +44,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                @media (max-width: $bp__sm) {
+                    width: calc(100% - 10px);
+                    max-height: 500px;
+                }
                 .icon {
                     width: 26px;
                     height: 26px;
@@ -53,9 +62,14 @@
                     position: relative;
                     margin-bottom: 10px;
                     color: #fff;
+                    @media (max-width: $bp__sm) {
+                        color: #000;
+                        text-align: center;
+                    }
                 }
     
                 span {
+                    max-width: 100%;
                     width: 300px;
                     font-size: 14px;
                 }
@@ -71,10 +85,21 @@
         @include bg("contain", "center top");
         position: relative;
         left: 20px;
+        @media (max-width: $bp__xl) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: $bp__sm) {
+            background: none;
+            height: auto;
+            left: 0;
+        }
         div {
             top: 100px;
             span {
                 color: $benefits__left__text__color;
+                @media (max-width: $bp__sm) {
+                    color: #000;
+                }
             }
         }
     }
@@ -87,10 +112,19 @@
         position: relative;
         right: 27px;
         bottom: 22px;
+        @media (max-width: $bp__sm) {
+            background: none;
+            height: auto;
+            right: 0;
+            bottom: 0;
+        }
         div {
             top: 122px;
             span {
                 color: $benefits__right__text__color;
+                @media (max-width: $bp__sm) {
+                    color: #000;
+                }
             }
         }
     }

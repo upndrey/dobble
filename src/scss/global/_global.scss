@@ -89,6 +89,28 @@ a {
 	width: $width__xxl;
 	margin: auto;
 	font-family: 'Dosis';
+
+	@media (max-width: $bp__xl) {
+		width: $width__xl;
+	}
+
+	@media (max-width: $bp__lg) {
+		width: $width__lg;
+	}
+	
+	@media (max-width: $bp__md) {
+		width: $width__md;
+	}
+	
+	@media (max-width: $bp__sm) {
+		width: $width__xs;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	@media (max-width: $bp__xs) {
+		width: $width__xs;
+	}
 }
 
 .btn {
@@ -102,18 +124,23 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .btn-buy {
 	color: $btn__text__color;
 	background: $btn__buy__color;
-	margin-left: 40px;
 	text-transform: none;
 	.icon {
 		width: 17px;
 		height: 16px;
 		margin-right: 10px;	
 		@include bg('contain', 'center');
+	}
+	transition: .5s ease-in-out;
+
+	&:hover {
+		background: $btn__buy__color_darker;
 	}
 }
 
@@ -139,4 +166,7 @@ h2 {
 	line-height: 130%;
 	margin-bottom: 5px;
 	letter-spacing: 0.05em;
+	@media (max-width: $bp__sm) {
+		font-size: 24px;
+	}
 }

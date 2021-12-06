@@ -17,8 +17,9 @@ $(document).ready(function() {
     }
 });
 
-// questions
-let questionsDom = document.querySelectorAll('.question__title');
+document.addEventListener("DOMContentLoaded", () => {
+  // questions
+  let questionsDom = document.querySelectorAll('.question__title');
   questionsDom.forEach((item) => {
     if (item.nextElementSibling.classList.contains("hidden")) {
       $(item.nextElementSibling).hide();
@@ -33,3 +34,12 @@ let questionsDom = document.querySelectorAll('.question__title');
       item.classList.toggle("active");
     });
   });
+
+  // burger
+  let burgerDom = document.querySelector(".burger");
+  let mobileNavDom = document.querySelector(".mobileNav__wrapper");
+  burgerDom.addEventListener("click", () => {
+    burgerDom.classList.toggle("active");
+    mobileNavDom.classList.toggle("hidden");
+  });
+});
