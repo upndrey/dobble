@@ -1,5 +1,7 @@
 .rules {
+    position: relative;
     &__wrapper {
+        overflow: hidden;
         background: $rules__bg;
         position: relative;
         .trees {
@@ -12,7 +14,26 @@
             @include bg("cover", "center");
             z-index: 1;
         }
+
+        .--svg__circle {
+            position: absolute;
+            width: 366px;
+            height: 349px;
+            @include bg("contain", "center");
+            z-index: 1;
+        }
+    
+        .circle1 {
+            left: -270px;
+            top: 150px;
+        }
+    
+        .circle2 {
+            right: -150px;
+            bottom: 80px;
+        }
     }
+
     &__block {
         padding-top: 142px;
         margin-bottom: 90px;
@@ -201,6 +222,24 @@
                     width: 100%;
                 }
             }
+
+            .icon__container {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: -120px;
+                    top: -70px;
+                    width: 88px;
+                    height: 88px;
+                    background: #C2EBF5;
+                    border-radius: 50px;
+                    @media (max-width: $bp__sm) {
+                        left: 0px;
+                        top: 0px;
+                    }
+                }
+            }
         }
 
         .--svg__rules_text2 {
@@ -215,6 +254,24 @@
                 width: 100%;
                 background: none;
                 height: auto;
+            }
+
+            .icon__container {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: -120px;
+                    top: -70px;
+                    width: 88px;
+                    height: 88px;
+                    background: #C2EBF5;
+                    border-radius: 50px;
+                    @media (max-width: $bp__sm) {
+                        left: 0px;
+                        top: 0px;
+                    }
+                }
             }
 
             span {
@@ -302,15 +359,5 @@
     &__bottom {
         position: relative;
         height: 260px;
-        .family {
-            position: absolute;
-            margin: auto;
-            bottom: -150px;
-            width: 100%;
-            height: 357px;
-            background-image: url("../img/family.png");
-            @include bg("contain", "center");
-            z-index: 2;
-        }
     }
 }

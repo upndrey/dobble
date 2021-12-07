@@ -1,4 +1,5 @@
 .buy {
+    position: relative;
     padding-top: 100px;
     padding-bottom: 80px;
     border-radius: 50px;
@@ -6,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
     @media (max-width: $bp__sm) {
         border-radius: 25px;
         padding-top: 0px;
@@ -13,6 +15,7 @@
     }
 
 	@media (max-width: $bp__lg) {
+        max-width: 100%;
 		flex-direction: column;
         padding-top: 0px;
 	}
@@ -29,16 +32,33 @@
     }
 
     .img {
-        width: 500px;
-        height: 500px;
+        position: relative;
+        bottom: 100px;
+        width: 700px;
+        height: 700px;
         max-width: 100%;
-        background: url("../img/buy.png");
-        @include bg("cover", "center")
+        background: url("../img/buy_dobble.png");
+        @include bg("contain", "center");
+        z-index: 20;
+
+        @media (max-width: $bp__lg) {
+            bottom: 50px;
+        }
+
+        @media (max-width: $bp__sm) {
+            height: 400px;
+        }
+        @media (max-width: $bp__xs) {
+            background-size: cover;
+            height: 360px;
+        }
     }
 
     &__block {
+        position: relative;
         width: 500px;
         max-width: 100%;
+        z-index: 998;
         @media (max-width: $bp__lg) {
             width: 450px;
         }
@@ -49,10 +69,12 @@
 
         p {
             color: $primary__color_lighter;
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 500;
             line-height: 150%;
             margin-bottom: 50px;
+            width: 400px;
+            max-width: 100%;
         }
     }
 
@@ -60,6 +82,7 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 40px;
+        z-index: 998;
         @media (max-width: $bp__sm) {
             flex-direction: column;
             align-items: center;
@@ -103,8 +126,10 @@
         width: 475px;
         height: 192px;
         position: relative;
+        z-index: 998;
         right: 20px;
         background: url("../img/alert_bg.png");
+        @include bg("cover");
 
         @media (max-width: $bp__sm) {
             right: 0;
@@ -114,15 +139,28 @@
             padding: 5px;
             border-radius: 10px;
         }
-        @include bg("cover");
+
+        .--svg__original {
+            position: absolute;
+            left: 0px;
+            top: -20px;
+            width: 70px;
+            height: 92px;
+            @include bg("contain", "center");
+
+            @media (max-width: $bp__sm) {
+                display: none;
+            }
+        }
+
         h3 {
             color: $alert__color;
             text-transform: uppercase;
             font-size: 17px;
             margin-bottom: 10px;
             position: relative;
-            left: 45px;
-            top: 25px;
+            left: 85px;
+            top: 35px;
             @media (max-width: $bp__sm) {
                 left: 0;
                 top: 0;
@@ -130,12 +168,13 @@
         }
 
         p {
-            width: 380px;
+            width: 300px;
             max-width: 100%;
             position: relative;
-            left: 45px;
-            top: 25px;
+            left: 85px;
+            top: 35px;
             @media (max-width: $bp__sm) {
+                width: 100%;
                 left: 0;
                 top: 0;
                 margin-bottom: 0;

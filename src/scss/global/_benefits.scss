@@ -2,8 +2,10 @@
     &__wrapper {
         background: url("../img/benefits_bg.png");
         position: relative;
+        overflow: hidden;
     }
     &__block {
+        position: relative;
         padding-top: 129px;
         margin-bottom: 57px;
         @media (max-width: $bp__sm) {
@@ -23,6 +25,31 @@
             letter-spacing: 0.5px;
             color: #838383;
             font-size: 17px;
+        }
+
+        .--svg__benefits_arrow {
+            position: absolute;
+            bottom: -100px;
+            right: 290px;
+
+            width: 90px;
+            height: 90px;
+            @include bg("contain", "center");
+            z-index: 999;
+
+            
+	
+            @media (max-width: $bp__xl) {
+                right: 180px;
+            }
+
+            @media (max-width: $bp__lg) {
+                right: 70px;
+            }
+            
+            @media (max-width: $bp__md) {
+                display: none;
+            }
         }
     }
 
@@ -121,6 +148,7 @@
             right: 0;
             bottom: 0;
         }
+
         div {
             top: 122px;
             span {

@@ -1,5 +1,8 @@
 .questions {
     display: flex;
+    @media (max-width: $bp__lg) {
+        max-width: calc(100% - 20px);
+    }
     @media (max-width: $bp__xl) {
         justify-content: center;
     }
@@ -11,6 +14,7 @@
         background: $buy__wrapper__bg;
         padding-top: 57px;
         padding-bottom: 120px;
+        overflow: hidden;
 
         h2 {
             text-align: center;
