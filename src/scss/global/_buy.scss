@@ -87,12 +87,12 @@
             flex-direction: column;
             align-items: center;
         }
+        
         .icon {
-            &__active {
-                background: linear-gradient(0deg, #FFEF60, #FFEF60), #FFFFFF;
-            }
 
             &__container {
+                cursor: pointer;
+                position: relative;
                 width: 181px;
                 height: 40px;
                 background: linear-gradient(0deg, rgba(236, 245, 251, 0.3), rgba(236, 245, 251, 0.3)), #FFFFFF;
@@ -114,6 +114,33 @@
                         margin-right: 0px;
                     }
                 }
+
+                .--svg__click {
+                    display: none;
+                    position: absolute;
+                    right: 10px;
+                    bottom: -15px;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+
+                    @include bg("contain", "center");
+                }
+
+                &.icon__active {
+                    background: linear-gradient(0deg, #FFEF60, #FFEF60), #FFFFFF;
+                    .--svg__click {
+                        display: block;
+                    }
+                }
+
+                &:hover {
+                    background: linear-gradient(0deg, #FFEF60, #FFEF60), #FFFFFF;
+                    .--svg__click {
+                        display: block;
+                    }
+                }
+                
             }
 
             width: 100px;
