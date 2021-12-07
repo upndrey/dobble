@@ -5,18 +5,20 @@
     &__block {
         position: relative;
         padding-top: 267px;
+        margin-bottom: 225px;
 	
         @media (max-width: $bp__lg) {
             padding-top: 70px;
+            margin-bottom: 75px;
+        }
+
+        @media (max-width: $bp__md) {
+            margin-bottom: 75px;
         }
         @media (max-width: $bp__sm) {
             padding-top: 100px;
         }
-        margin-bottom: 225px;
-        
-        @media (max-width: $bp__md) {
-            margin-bottom: 75px;
-        }
+
         .clouds {
             width: 600px;
             height: 268px;
@@ -83,18 +85,22 @@
 
         .disks {
             position: absolute;
-            right: 0;
+            right: -50px;
             z-index: 2;
             top: 100px;
             width: 975px;
             height: 650px;
             background-image: url("../img/disks.png");
             @include bg("contain", "center");
+            @media (max-width: $bp__xl) {
+                right: -350px;
+            }
             @media (max-width: $bp__lg) {
                 position: relative;
                 right: 50px;
                 width: 100%;
-                margin-bottom: 50px;
+                height: 450px;
+                margin-bottom: 100px;
             }
             @media (max-width: $bp__sm) {
                 text-align: center;
