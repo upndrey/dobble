@@ -34,12 +34,12 @@
         <div class="logo --svg__logo"></div>
         <nav>
             <ul>
-                <li class="active"><a href="#"><div class="icon icon1 --svg__underline"></div>Приобрести</a></li>
-                <li><a href="#"><div class="icon icon2 --svg__underline"></div>Об игре</a></li>
-                <li><a href="#"><div class="icon icon3 --svg__underline"></div>Преимущества</a></li>
-                <li><a href="#"><div class="icon icon4 --svg__underline"></div>Польза настольных игр</a></li>
-                <li><a href="#"><div class="icon icon5 --svg__underline"></div>Отзывы</a></li>
-                <li><a href="#"><div class="icon icon6 --svg__underline"></div>Вопросы</a></li>
+                <li class="buyLink"><a href="#">Приобрести</a></li>
+                <li class="rulesLink"><a href="#">Об игре</a></li>
+                <li class="featuresLink"><a href="#">Преимущества</a></li>
+                <li class="benefitsLink"><a href="#">Польза настольных игр</a></li>
+                <li class="reviewsLink"><a href="#">Отзывы</a></li>
+                <li class="questionsLink"><a href="#">Вопросы</a></li>
             </ul>
             <div class="btn btn-buy"><div class="icon --svg__cart"></div>Заказать</div>
             <div class="burger">
@@ -49,12 +49,12 @@
     </div>
     <div class="mobileNav__wrapper hidden">
         <ul>
-            <li class="active"><a href="#"><div class="icon icon1 --svg__underline"></div>Приобрести</a></li>
-            <li><a href="#"><div class="icon icon2 --svg__underline"></div>Об игре</a></li>
-            <li><a href="#"><div class="icon icon3 --svg__underline"></div>Преимущества</a></li>
-            <li><a href="#"><div class="icon icon4 --svg__underline"></div>Польза настольных игр</a></li>
-            <li><a href="#"><div class="icon icon5 --svg__underline"></div>Отзывы</a></li>
-            <li><a href="#"><div class="icon icon6 --svg__underline"></div>Вопросы</a></li>
+            <li class="buyLink"><a href="#">Приобрести</a></li>
+            <li class="rulesLink"><a href="#">Об игре</a></li>
+            <li class="featuresLink"><a href="#">Преимущества</a></li>
+            <li class="benefitsLink"><a href="#">Польза настольных игр</a></li>
+            <li class="reviewsLink"><a href="#">Отзывы</a></li>
+            <li class="questionsLink"><a href="#">Вопросы</a></li>
         </ul>
     </div>
 </div>
@@ -93,7 +93,7 @@
 </header>
 
 	<main class="main">
-		<div class="rules__wrapper wrapper">
+		<div class="rules__wrapper wrapper" id="rules">
     <div class="icon circle1 --svg__circle"></div>
     <div class="icon circle2 --svg__circle"></div>
     <div class="img trees"></div>
@@ -142,7 +142,7 @@
         </div>
     </div>
 </div>
-		<div class="features__wrapper wrapper">
+		<div class="features__wrapper wrapper" id="features">
     <div class="icon --svg__features_underline1"></div>
     <div class="icon --svg__features_underline2"></div>
     <div class="img family"></div>
@@ -199,7 +199,7 @@
     <div class="--svg__dobbly2"></div>
     <div class="--svg__dobbly2ellipse"></div>
 </div>
-		<div class="benefits__wrapper wrapper">
+		<div class="benefits__wrapper wrapper" id="benefits">
     <div class="benefits container">
         <div class="benefits__block">
             <h2>Коротко о пользе настольных игр</h2>
@@ -238,7 +238,7 @@
         </div>
     </div>
 </div>
-		<div class="buy__wrapper wrapper">
+		<div class="buy__wrapper wrapper" id="buy">
     <div class="buy container">
         <div class="img">
         </div>
@@ -267,39 +267,36 @@
         </div>
     </div>
 </div>
-		
-  <div class="reviews__wrapper wrapper" id="reviews">
-    <div class="reviews container">
-      <h2>Опыт других игроков</h2>
-      <p>Посмотрите, что говорят покупатели, которые уже попробовали нашу игру</p>
-      <div class="reviews__slick slick">
-        <div class="slick__elem">
-          <div><img src="#" alt="1"></div>
-        </div>
-        <div class="slick__elem">
-          <div><img src="#" alt="2"></div>
-        </div>
-        <div class="slick__elem">
-          <div><img src="#" alt="3"></div>
-        </div>
-        <div class="slick__elem">
-          <div><img src="#" alt="3"></div>
-        </div>
-        <div class="slick__elem">
-          <div><img src="#" alt="3"></div>
-        </div>
-        <div class="slick__elem">
-          <div><img src="#" alt="3"></div>
-        </div>
-        <div class="slick__elem">
-          <div><img src="#" alt="3"></div>
-        </div>
+		<div class="reviews__wrapper wrapper" id="reviews">
+  <div class="reviews container">
+    <h2>Опыт других игроков</h2>
+    <p>Посмотрите, что говорят покупатели, которые уже попробовали нашу игру</p>
+    <div class="reviews__slick slick">
+      <div class="slick__elem">
+        <div><img src="#" alt="1"></div>
+      </div>
+      <div class="slick__elem">
+        <div><img src="#" alt="2"></div>
+      </div>
+      <div class="slick__elem">
+        <div><img src="#" alt="3"></div>
+      </div>
+      <div class="slick__elem">
+        <div><img src="#" alt="3"></div>
+      </div>
+      <div class="slick__elem">
+        <div><img src="#" alt="3"></div>
+      </div>
+      <div class="slick__elem">
+        <div><img src="#" alt="3"></div>
+      </div>
+      <div class="slick__elem">
+        <div><img src="#" alt="3"></div>
       </div>
     </div>
   </div>
-		
-
-  <div class="questions__wrapper wrapper">
+</div>
+		<div class="questions__wrapper wrapper" id="questions">
     <h2>Частые вопросы</h2>
     <p>Мы готовы ответить на любые ваши вопросы</p>
     <div class="questions container">
@@ -451,7 +448,7 @@
             </div>
         </div>
     </div>
-  </div>
+</div>
 		<div class="time__wrapper wrapper">
     <div class="img vector1"></div>
     <div class="img vector3"></div>
@@ -471,12 +468,12 @@
             <div class="nav__logo --svg__logo_footer"></div>
         </div>
       <ul class="nav__list">
-        <li class="active"><a href="#">Доббль</a></li>
-        <li><a href="#">Об игре</a></li>
-        <li><a href="#">Преимущества</a></li>
-        <li><a href="#">Польза настольных игр</a></li>
-        <li><a href="#">Отзывы</a></li>
-        <li><a href="#">Вопросы</a></li>
+        <li class="buyLink"><a href="#">Доббль</a></li>
+        <li class="rulesLink"><a href="#">Об игре</a></li>
+        <li class="featuresLink"><a href="#">Преимущества</a></li>
+        <li class="benefitsLink"><a href="#">Польза настольных игр</a></li>
+        <li class="reviewsLink"><a href="#">Отзывы</a></li>
+        <li class="questionsLink"><a href="#">Вопросы</a></li>
       </ul>
       <div class="btn btn-buy"><div class="icon --svg__cart"></div>Заказать</div>
     </nav>

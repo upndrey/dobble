@@ -52,15 +52,6 @@
                 font-family: 'Dosis';
                 font-size: 14px;
                 position: relative;
-                .--svg__underline {
-                    display: none;
-                    position: absolute;
-                    bottom: -5px;
-                    left: 0px;
-                    width: 100%;
-                    height: 6px;
-                    @include bg("contain", "center");
-                }
 
                 .icon2 {
                     height: 3px;
@@ -77,9 +68,9 @@
                     bottom: -10px;
                 }
                 
-                &.active .--svg__underline,
-                &:hover .--svg__underline {
-                    display: block;
+                &.active,
+                &:hover {
+                    font-weight: bold;
                 }
             }
         }

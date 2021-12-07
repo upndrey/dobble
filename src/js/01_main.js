@@ -1,6 +1,5 @@
 // slick
 $(document).ready(function() {
-    console.log(1);
     if ($(window).width() > 768) {
         $('.slick').slick({
             slidesToShow: 3,
@@ -15,6 +14,78 @@ $(document).ready(function() {
             dots: true,
         });
     }
+    let currentActiveLink = null;
+    $(".buyLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".buyLink")
+        $(".buyLink").removeClass("active");
+      currentActiveLink = ".buyLink";
+      $(".buyLink").addClass("active");
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#buy").offset().top
+      }, 2000);
+    });
+
+    $(".rulesLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".rulesLink")
+        $(".rulesLink").removeClass("active");
+      currentActiveLink = ".rulesLink";
+      $(".rulesLink").addClass("active");
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#rules").offset().top
+      }, 2000);
+    });
+
+    $(".featuresLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".featuresLink")
+        $(".featuresLink").removeClass("active");
+      currentActiveLink = ".featuresLink";
+      $(".featuresLink").addClass("active");
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#features").offset().top
+      }, 2000);
+    });
+
+    $(".benefitsLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".benefitsLink")
+        $(".benefitsLink").removeClass("active");
+      currentActiveLink = ".benefitsLink";
+      $(".benefitsLink").addClass("active");
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#benefits").offset().top
+      }, 2000);
+    });
+
+    $(".reviewsLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".reviewsLink")
+        $(".reviewsLink").removeClass("active");
+      currentActiveLink = ".reviewsLink";
+      $(".reviewsLink").addClass("active");
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#reviews").offset().top
+      }, 2000);
+    });
+
+    $(".questionsLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".questionsLink")
+        $(".questionsLink").removeClass("active");
+      currentActiveLink = ".questionsLink";
+      $(".questionsLink").addClass("active");
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#questions").offset().top - 100
+      }, 2000);
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
