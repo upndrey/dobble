@@ -60,7 +60,8 @@
                     display: block;
                     width: calc(100% - 20px);
                     margin: auto;
-                    height: 500px;
+                    height: contain;
+                    max-height: 100%;
 
                     @media (max-width: $bp__md) {
                         height: 300px;
