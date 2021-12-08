@@ -1,94 +1,107 @@
-// slick
 $(document).ready(function() {
-    if ($(window).width() > 768) {
-        $('.slick').slick({
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            dots: true,
-        });
-    } 
-    else {
-        $('.slick').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-        });
-    }
-    let currentActiveLink = null;
-    $(".buyLink").click(function(e) {
-      e.preventDefault();
-      if(currentActiveLink && currentActiveLink !== ".buyLink")
-        $(".buyLink").removeClass("active");
-      currentActiveLink = ".buyLink";
-      $(".buyLink").addClass("active");
-
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $("#buy").offset().top
-      }, 2000);
+  // slick
+  if ($(window).width() > 768) {
+    $('.slick').slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: true,
     });
-
-    $(".rulesLink").click(function(e) {
-      e.preventDefault();
-      if(currentActiveLink && currentActiveLink !== ".rulesLink")
-        $(".rulesLink").removeClass("active");
-      currentActiveLink = ".rulesLink";
-      $(".rulesLink").addClass("active");
-
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $("#rules").offset().top
-      }, 2000);
+  } 
+  else {
+    $('.slick').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
     });
+  }
 
-    $(".featuresLink").click(function(e) {
-      e.preventDefault();
-      if(currentActiveLink && currentActiveLink !== ".featuresLink")
-        $(".featuresLink").removeClass("active");
-      currentActiveLink = ".featuresLink";
-      $(".featuresLink").addClass("active");
+  //links
+  let currentActiveLink = null;
+  $(".buyLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".buyLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".buyLink";
+    $(".buyLink").addClass("active");
 
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $("#features").offset().top
-      }, 2000);
-    });
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#buy").offset().top
+    }, 2000);
+  });
 
-    $(".benefitsLink").click(function(e) {
-      e.preventDefault();
-      if(currentActiveLink && currentActiveLink !== ".benefitsLink")
-        $(".benefitsLink").removeClass("active");
-      currentActiveLink = ".benefitsLink";
-      $(".benefitsLink").addClass("active");
+  $(".rulesLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".rulesLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".rulesLink";
+    $(".rulesLink").addClass("active");
 
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $("#benefits").offset().top
-      }, 2000);
-    });
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#rules").offset().top
+    }, 2000);
+  });
 
-    $(".reviewsLink").click(function(e) {
-      e.preventDefault();
-      if(currentActiveLink && currentActiveLink !== ".reviewsLink")
-        $(".reviewsLink").removeClass("active");
-      currentActiveLink = ".reviewsLink";
-      $(".reviewsLink").addClass("active");
+  $(".featuresLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".featuresLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".featuresLink";
+    $(".featuresLink").addClass("active");
 
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $("#reviews").offset().top
-      }, 2000);
-    });
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#features").offset().top
+    }, 2000);
+  });
 
-    $(".questionsLink").click(function(e) {
-      e.preventDefault();
-      if(currentActiveLink && currentActiveLink !== ".questionsLink")
-        $(".questionsLink").removeClass("active");
-      currentActiveLink = ".questionsLink";
-      $(".questionsLink").addClass("active");
+  $(".benefitsLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".benefitsLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".benefitsLink";
+    $(".benefitsLink").addClass("active");
 
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $("#questions").offset().top - 100
-      }, 2000);
-    });
-});
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#benefits").offset().top
+    }, 2000);
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
+  $(".reviewsLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".reviewsLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".reviewsLink";
+    $(".reviewsLink").addClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#reviews").offset().top
+    }, 2000);
+  });
+
+  $(".questionsLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".questionsLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".questionsLink";
+    $(".questionsLink").addClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#questions").offset().top - 100
+    }, 2000);
+  });
+
+
   // questions
   let questionsDom = document.querySelectorAll('.question__title');
   questionsDom.forEach((item) => {
@@ -113,4 +126,84 @@ document.addEventListener("DOMContentLoaded", () => {
     burgerDom.classList.toggle("active");
     mobileNavDom.classList.toggle("hidden");
   });
+
+  // close window
+
+  const CookieService = {
+    setCookie(name, value, days) {
+      let expires = '';
+
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = '; expires=' + date.toUTCString();
+      }
+
+      document.cookie = name + '=' + (value || '')  + expires + ';';
+    },
+
+    getCookie(name) {
+      const cookies = document.cookie.split(';');
+
+      for (const cookie of cookies) {
+        if (cookie.indexOf(name + '=') > -1) {
+          return cookie.split('=')[1];
+        }
+      }
+
+      return null;
+    }
+  }
+  if (!CookieService.getCookie('exitIntentShown')) {
+    setTimeout(() => {
+      document.addEventListener('mouseout', mouseEvent);
+    }, 10_000);
+  }
+  const mouseEvent = e => {
+    const shouldShowExitIntent = 
+      !e.toElement && 
+      !e.relatedTarget &&
+      e.clientY < 10;
+
+    if (shouldShowExitIntent) {
+      document.removeEventListener('mouseout', mouseEvent);
+      document.querySelector('.closePopup').classList.remove('hidden');
+      CookieService.setCookie('exitIntentShown', true, 30);
+    }
+  };
+
+  $(".closePopup").click(function(e) {
+    if(
+      e.target.classList.contains("closePopup") || 
+      e.target.classList.contains("closePopup__close")
+    ){
+      $(".closePopup").addClass("hidden");
+    }
+  });
+
+  $(".closePopup__block>.btn").click(function(e) {
+    $(".closePopup").addClass("hidden");
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#buy").offset().top
+    }, 2000);
+  });
+
+  // video
+  $(".--svg__rules_text3").click(function() {
+    $(".videoPopup").removeClass("hidden");
+  });
+
+  $(".videoPopup").click(function(e) {
+    if(
+      e.target.classList.contains("videoPopup") || 
+      e.target.classList.contains("videoPopup__close")
+    ){
+      $(".videoPopup").addClass("hidden");
+      $(".videoPopup video").get(0).pause();
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  
 });

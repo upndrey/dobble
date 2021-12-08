@@ -4,6 +4,70 @@
         overflow: hidden;
         background: $rules__bg;
         position: relative;
+        
+
+        .videoPopup {
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.199);
+            display: block;
+            width: calc(100vw - 16px);
+            height: 100vh;
+            z-index:9999;
+            padding-top: 150px;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &.hidden{ 
+                display: none;
+            }
+
+            &__close {
+                font-family: sans-serif;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                right: 50px;
+                top: 50px;
+                display: flex;  
+                align-items: center;
+                justify-content: center;
+                font-size: 36px;
+                background: #fff;
+                border-radius: 50px;
+                @media (max-width: $bp__md) {
+                    right: 10px;
+                }
+            }
+
+            &__block {
+                max-width: calc(100% - 20px);
+                cursor: default;
+                padding-bottom: 10px;
+                background: #FFFFFF;
+                border-radius: 12px;
+                padding-top: 50px;
+                @media (max-width: $bp__xs) {
+                    padding-top: 20px;
+                }
+
+                h2 {
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+
+                video {
+                    display: block;
+                    width: calc(100% - 20px);
+                    margin: auto;
+                    height: 500px;
+
+                    @media (max-width: $bp__md) {
+                        height: 300px;
+                    }
+                }
+            }
+        }
         .trees {
             position: absolute;
             bottom: 0;
