@@ -168,7 +168,7 @@ $(document).ready(function() {
     if (shouldShowExitIntent) {
       document.removeEventListener('mouseout', mouseEvent);
       document.querySelector('.closePopup').classList.remove('hidden');
-      CookieService.setCookie('exitIntentShown', true, 30);
+      CookieService.setCookie('exitIntentShown', true, 1);
     }
   };
 
