@@ -41,6 +41,7 @@
             }
 
             &__block {
+                width: 767px;
                 max-width: calc(100% - 20px);
                 cursor: default;
                 padding-bottom: 10px;
@@ -60,12 +61,7 @@
                     display: block;
                     width: calc(100% - 20px);
                     margin: auto;
-                    height: contain;
-                    max-height: 100%;
-
-                    @media (max-width: $bp__md) {
-                        height: 300px;
-                    }
+                    max-height: 500px;
                 }
             }
         }
