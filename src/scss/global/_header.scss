@@ -24,7 +24,7 @@
             width: 600px;
             height: 268px;
             position: absolute;
-            left: 278px;
+            left: 168px;
             top: 36px;
             background-image: url("../img/clouds.png");
             @include bg("contain", "center");
@@ -127,9 +127,9 @@
 
         .disks {
             position: absolute;
-            right: -200px;
             z-index: 2;
-            top: 100px;
+            top: 92px;
+            right: -186px;
             width: 975px;
             height: 650px;
             background-image: url("../img/disks.png");
@@ -170,6 +170,12 @@
         &>div {
             display: flex;
             align-items: center;
+
+            span {
+                color: $primary__color_lighter;
+                font-size: 14px;
+            }
+
             .icon {
                 &__container {
                     width: 50px;
@@ -191,7 +197,7 @@
             }
 
             &:not(:last-child) {
-                margin-right: 40px;
+                margin-right: 93px;
                 @media (max-width: $bp__md) {
                     margin-right: 0;
                     margin-bottom: 25px;

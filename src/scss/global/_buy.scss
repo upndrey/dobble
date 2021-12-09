@@ -1,7 +1,6 @@
 .buy {
     position: relative;
     padding-top: 100px;
-    padding-bottom: 80px;
     border-radius: 50px;
     background: $buy__bg;
     display: flex;
@@ -11,7 +10,6 @@
     @media (max-width: $bp__sm) {
         border-radius: 25px;
         padding-top: 0px;
-        padding-bottom: 40px;
     }
 
 	@media (max-width: $bp__lg) {
@@ -23,8 +21,8 @@
     &__wrapper {
         background: $buy__wrapper__bg;
         position: relative;
-        padding-top: 100px;
-        padding-bottom: 180px;
+        padding-top: 127px;
+        padding-bottom: 36px;
         @media (max-width: $bp__sm) {
             padding-left: 10px;
             padding-right: 10px;
@@ -59,6 +57,7 @@
         width: 500px;
         max-width: 100%;
         z-index: 998;
+        align-self: flex-start;
         @media (max-width: $bp__lg) {
             width: 450px;
         }
