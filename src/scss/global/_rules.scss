@@ -11,7 +11,7 @@
             top: 0;
             background: rgba(0, 0, 0, 0.199);
             display: block;
-            width: calc(100vw - 16px);
+            width: 100%;
             height: 100vh;
             z-index:9999;
             padding-top: 150px;
@@ -40,6 +40,12 @@
                 }
             }
 
+            h2 {
+                text-align: center;
+                margin-bottom: 15px;
+                cursor: default;
+            }
+
             &__block {
                 width: 767px;
                 max-width: calc(100% - 20px);
@@ -47,15 +53,7 @@
                 padding-bottom: 10px;
                 background: #FFFFFF;
                 border-radius: 12px;
-                padding-top: 50px;
-                @media (max-width: $bp__xs) {
-                    padding-top: 20px;
-                }
-
-                h2 {
-                    text-align: center;
-                    margin-bottom: 50px;
-                }
+                padding-top: 10px;
 
                 video {
                     display: block;
@@ -98,6 +96,11 @@
     &__block {
         padding-top: 142px;
         margin-bottom: 90px;
+
+        @media (max-width: $bp__sm) {
+            padding-top: 50px;
+            margin-bottom: 50px;
+        }
         
         h2 {
             text-align: center;
@@ -136,9 +139,12 @@
             align-items: center;
             justify-content: center;
             font-size: 22px;
+            
             @media (max-width: $bp__sm) {
                 flex-direction: column;
                 height: auto;
+                text-align: center;
+                margin-bottom: 60px;
             }
 
 

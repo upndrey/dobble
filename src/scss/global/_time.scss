@@ -13,6 +13,10 @@
         padding-bottom: 50px;
         overflow: hidden;
 
+        @media (max-width: $bp__sm) {
+            padding-top: 50px;
+        }
+
         .vector1 {
             position: absolute;
             left: -350px;
@@ -48,7 +52,7 @@
         width: 569px;
         max-width: 100%;
         height: 378px;
-        background: url("../img/time.png");
+        background: url("../img/time.jpg");
         @include bg("cover", "center");
         z-index: 100;
 

@@ -60,6 +60,11 @@
         align-self: flex-start;
         @media (max-width: $bp__lg) {
             width: 450px;
+            margin: auto;
+        }
+        @media (max-width: $bp__sm) {
+            width: calc(100% - 10px);
+            margin: auto;
         }
         
         h2 {
@@ -157,13 +162,16 @@
         background: url("../img/alert_bg.png");
         @include bg("cover");
 
-        @media (max-width: $bp__sm) {
+        @media (max-width: $bp__md) {
             right: 0;
+            width: 100%;
             max-width: 100%;
             height: auto;
             background: #fff;
             padding: 5px;
             border-radius: 10px;
+            margin-bottom: 20px;
+            margin-top: 70px;
         }
 
         .--svg__original {
@@ -175,7 +183,9 @@
             @include bg("contain", "center");
 
             @media (max-width: $bp__sm) {
-                display: none;
+                left: auto;
+                top: -60px;
+                right: 25px;
             }
         }
 

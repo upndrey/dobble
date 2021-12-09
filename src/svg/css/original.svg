@@ -1,11 +1,11 @@
-<svg width="75" height="101" viewBox="0 0 75 101" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="438" height="582" viewBox="0 0 438 582" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_d_107_616)">
-<circle cx="37.9809" cy="59.4337" r="33.019" fill="white"/>
+<circle cx="229.281" cy="368.49" r="204.718" fill="white"/>
 </g>
-<rect x="1" y="18.7111" width="31.6982" height="31.6982" transform="rotate(-36.1777 1 18.7111)" fill="url(#pattern0)"/>
-<rect x="11.5664" y="33.019" width="52.8304" height="52.8304" fill="url(#pattern1)"/>
+<rect y="116.009" width="196.529" height="196.529" transform="rotate(-36.1777 0 116.009)" fill="url(#pattern0)"/>
+<rect x="65.5117" y="204.719" width="327.549" height="327.549" fill="url(#pattern1)"/>
 <defs>
-<filter id="filter0_d_107_616" x="0.961914" y="26.4147" width="74.0381" height="74.038" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_107_616" x="20.5635" y="163.772" width="417.436" height="417.436" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>

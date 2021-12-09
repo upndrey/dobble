@@ -11,6 +11,11 @@
         background: $buy__wrapper__bg;
         overflow: hidden;
 
+        @media (max-width: $bp__sm) {
+            padding-top: 50px;
+            padding-bottom: 70px;
+        }
+
         &:before {
             content: '';
             position: absolute;

@@ -167,6 +167,10 @@
             margin: auto;
         }
         
+        @media (max-width: $bp__sm) {
+            padding-bottom: 50px;
+        }
+        
         &>div {
             display: flex;
             align-items: center;

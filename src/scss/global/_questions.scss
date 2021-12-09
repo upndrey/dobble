@@ -16,6 +16,10 @@
         padding-bottom: 120px;
         overflow: hidden;
 
+        @media (max-width: $bp__sm) {
+            padding-bottom: 60px;
+        }
+
         h2 {
             text-align: center;
         }

@@ -95,6 +95,11 @@
         flex-wrap: wrap;
         justify-content: center;
         padding-bottom: 50px;
+
+        @media (max-width: $bp__sm) {
+            padding-bottom: 75px;
+        }
+
         &>div {
             width: 298px;
             height: 200px;
@@ -102,6 +107,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            
+            @media (max-width: $bp__sm) {
+                margin: 0 37px 50px 37px;
+            }
 
             * {
                 text-align: center;

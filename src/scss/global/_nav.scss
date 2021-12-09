@@ -1,12 +1,14 @@
 .nav {
     &__wrapper {
         position: fixed;
-        background: $header__bg;
+        background: $header__bg_transparent;
         padding: 14px;
         box-sizing: border-box;
         z-index: 9999;
+        @media (max-width: $bp__md) {
+            padding: 5px 14px;
+        }
 
-        
         .mobileNav__wrapper {
             display: block;
             &.hidden {
@@ -29,10 +31,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .--svg__logo {
+    .logo {
+        background: url("../img/logo.png");
         width: 69px;
         height: 69px;
         @include bg("contain", "center");
+        @media (max-width: $bp__md) {
+            width: 50px;
+            height: 50px;
+        }
     }
     nav {
         display: flex;
