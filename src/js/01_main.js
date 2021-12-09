@@ -1,12 +1,20 @@
 $(document).ready(function() {
   // slick
-  if ($(window).width() > 768) {
+  if ($(window).width() > 1200) {
     $('.slick').slick({
       slidesToShow: 3,
       slidesToScroll: 3,
       dots: true,
     });
   } 
+  else if ($(window).width() < 760) {
+    $('.slick').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false
+    });
+  }
   else {
     $('.slick').slick({
       slidesToShow: 1,
