@@ -140,8 +140,8 @@
             padding: 0;
             cursor: pointer;
             margin: 0 5px;
-            width: 15px;
-            height: 15px;
+            width: 10px;
+            height: 10px;
             border-radius: 100px;
 
             &>* {
@@ -149,9 +149,10 @@
                 color: transparent;
                 background-color: transparent;
                 border: 1px solid #000;
-                width: 15px;
-                height: 15px;
+                width: 10px;
+                height: 10px;
                 border-radius: 100px;
+                padding: 0;
             }
 
             &.slick-active {
