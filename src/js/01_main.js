@@ -25,17 +25,17 @@ $(document).ready(function() {
 
   //links
   let currentActiveLink = null;
-  $(".buyLink").click(function(e) {
+  $(".dobbleLink").click(function(e) {
     e.preventDefault();
-    if(currentActiveLink && currentActiveLink !== ".buyLink")
+    if(currentActiveLink && currentActiveLink !== ".dobbleLink")
       document.querySelectorAll(currentActiveLink).forEach((elem) => {
         elem.classList.remove("active");
       });
-    currentActiveLink = ".buyLink";
-    $(".buyLink").addClass("active");
+    currentActiveLink = ".dobbleLink";
+    $(".dobbleLink").addClass("active");
 
     $([document.documentElement, document.body]).animate({
-      scrollTop: $("#buy").offset().top
+      scrollTop: $("#dobble").offset().top
     }, 2000);
   });
 

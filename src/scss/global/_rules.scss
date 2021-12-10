@@ -395,6 +395,9 @@
             height: 154px;
             
 
+            @media (max-width: $bp__xl) {
+                order: 4;
+            }
             @media (max-width: $bp__md) {
                 width: 490px;
                 height: 120px;
@@ -422,6 +425,9 @@
             width: 535px;
             height: 154px;
 
+            @media (max-width: $bp__xl) {
+                order: 3;
+            }
             @media (max-width: $bp__md) {
                 width: 490px;
                 height: 120px;
