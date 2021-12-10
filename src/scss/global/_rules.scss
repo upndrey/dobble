@@ -102,6 +102,9 @@
             height: 349px;
             @include bg("contain", "center");
             z-index: 1;
+            @media (max-width: $bp__md) {
+                opacity: .2;
+            }
         }
     
         .circle1 {
