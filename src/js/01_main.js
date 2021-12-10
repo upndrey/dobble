@@ -38,6 +38,19 @@ $(document).ready(function() {
       scrollTop: $("#dobble").offset().top
     }, 2000);
   });
+  $(".buyLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".buyLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".buyLink";
+    $(".buyLink").addClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#buy").offset().top
+    }, 2000);
+  });
 
   $(".rulesLink").click(function(e) {
     e.preventDefault();
