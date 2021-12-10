@@ -62,7 +62,7 @@
                     margin: 0 20px;
                     &.active,
                     &:hover {
-                        font-weight: bold;
+                        text-decoration: underline;
                     }
                     @media (max-width: $bp__lg) {
                         margin-bottom: 10px;
