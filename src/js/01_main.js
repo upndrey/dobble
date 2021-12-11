@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function(e) {
   // slick
   if ($(window).width() > 1200) {
     $('.slick').slick({
@@ -48,7 +48,7 @@ $(document).ready(function() {
     $(".buyLink").addClass("active");
 
     $([document.documentElement, document.body]).animate({
-      scrollTop: $("#buy").offset().top
+      scrollTop: $("#buy").offset().top - 100
     }, 2000);
   });
 
@@ -149,7 +149,6 @@ $(document).ready(function() {
   });
 
   // close window
-
   const CookieService = {
     setCookie(name, value, days) {
       let expires = '';
@@ -175,11 +174,14 @@ $(document).ready(function() {
       return null;
     }
   }
-  if (!CookieService.getCookie('exitIntentShown')) {
-    setTimeout(() => {
-      document.addEventListener('mouseout', mouseEvent);
-    }, 10_000);
-  }
+
+  document.addEventListener("mouseenter", () => {
+    if (!CookieService.getCookie('exitIntentShown')) {
+      setTimeout(() => {
+        document.addEventListener('mouseout', mouseEvent);
+      }, 10_000);
+    }
+  }, {once: true});
   const mouseEvent = e => {
     const shouldShowExitIntent = 
       !e.toElement && 

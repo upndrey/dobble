@@ -94,5 +94,17 @@
                 color: #a990ff;
             }
         }
+
+        .juridical {
+            margin: auto;
+            color: #fff;
+            width: fit-content;
+            margin-bottom: 20px;
+            font-size: 16px;
+            &>p {
+                text-align: center;
+                margin-bottom: 5px;
+            }
+        }
     }
 }

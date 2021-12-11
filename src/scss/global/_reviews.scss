@@ -63,6 +63,7 @@
         height: 350px;
         padding: 0 10px;
         box-sizing: border-box;
+        overflow: hidden;
 
         div {
             width: 100%;
@@ -74,8 +75,8 @@
             display: -webkit-flex;
             display: -ms-flex;
             display: flex;
-            -ms-align-items: center;
-            align-items: center;
+            align-items: flex-start;
+            padding-top: 20px;
             justify-content: center;
 
             img {
